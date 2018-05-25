@@ -8,6 +8,5 @@ class Fee extends Model
 {
     protected $fillable = [
         'type'
-    ];  
-    
+    ]; 
 }
