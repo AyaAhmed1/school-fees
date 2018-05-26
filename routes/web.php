@@ -13,5 +13,4 @@
 
 Route::get('/','SchoolFeesController@index');
 Route::post('/','SchoolFeesController@store');
-Route::get('/aya','SchoolFeesController@find');
 

@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\School;
 use App\Grade;
@@ -25,31 +24,18 @@ class SchoolFeesController extends Controller
     }
 
     public function store(Request $request){
-       return ($request);
-       // $arr=$request->ARRAY.split(" ");
-       // return $arr;
-        
-         foreach ($request->ARRAY as $field){
-           //  dd($field->key);
-             /*
+      foreach ($request->ARRAY as $field=>$val){
+          $f_key=explode(" ",$field);
+          $grade_id=$f_key[0];
+          $fee_id=$f_key[1];
             SchoolFees::create([
                 'school_id'=>$request->school,
-                'grade_id'=> 1,
+                'grade_id'=> $grade_id,
                 'year_id'=>$request->year,
-                'fee_id'=>1,
-                'fee'=>$field,
+                'fee_id'=>$fee_id,
+                'fee'=>$val,
             ]);
-            */
      }
-     
-     
-  }
-
-  public function find(){
-      $show=SchoolFees::find(1);
-      //return ($show->school->type);
-      return view('fees.aya',[
-          'data'=>$show
-      ]);
+     return redirect()->back()->with('alert', 'Successfully inserted');
   }
 }
