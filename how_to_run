@@ -1,0 +1,8 @@
+How_to_run
+____________________
+
+1-cd to project file
+2- run command 'composer install'
+3- create .env file 
+4-run command 'php artisan migrate --seed'
+5-go to   http://127.0.0.1:8000/

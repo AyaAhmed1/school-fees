@@ -36,6 +36,6 @@ class SchoolFeesController extends Controller
                 'fee'=>$val,
             ]);
      }
-     return redirect()->back()->with('alert', 'Successfully inserted');
+     return redirect()->back()->with('alert', 'Successfully inserted!');
   }
 }

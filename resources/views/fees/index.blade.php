@@ -13,7 +13,7 @@
 
 <h1> School Fees </h1>
 </div>
-<form method="post" action="/">
+<form method="post" action="/save">
 {{csrf_field()}}
 
 <div class="form-group">
@@ -50,16 +50,17 @@
   <tr>
   <th class="thead-dark"> {{ $grade->grade }} </th>
     @foreach($fees as $fee)
-  <td> <input type="number" min="0" value="0" step="0.5" name="ARRAY[{{$grade->id}} {{$fee->id}}]" > </td>
+  <td> <input type="number" min="0" value="0" step="0.01" name="ARRAY[{{$grade->id}} {{$fee->id}}]" > </td>
   @endforeach
 </tr>
 @endforeach
 
 
 </table>
+<div align='center'>
 <input type="submit" value="Save" class="btn btn-success">
 <input type="reset" value="Reset" class="btn btn-danger">
-
+</div>
 </form>
 </div>
 @endsection
