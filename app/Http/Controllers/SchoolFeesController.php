@@ -61,7 +61,7 @@ public function select(Request $request){
                 'fee'=>$val,
             ]);
      }
-     return redirect()->back()->with('alert', 'Successfully inserted!')->with('school',$request->school);
+     return redirect()->back()->with('alert', 'Successfully inserted!');
     }
   }
   else {
