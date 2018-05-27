@@ -14,5 +14,8 @@ class YearSeeder extends Seeder
         DB::table('years')->insert([
             'year' => '2017/2018',
         ]);
+        DB::table('years')->insert([
+            'year' => '2018/2019',
+        ]);
     }
 }
