@@ -12,5 +12,7 @@
 */
 
 Route::get('/','SchoolFeesController@index');
+Route::post('/','SchoolFeesController@select');
 Route::post('/save','SchoolFeesController@store');
+
 
